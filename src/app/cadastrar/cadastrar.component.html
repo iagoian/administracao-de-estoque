@@ -2,27 +2,29 @@
     <h1>Cadastrar computador</h1>
     <form>
         <div class="form-group">
-            <label for="">Marca</label>
-            <input type="text">
+            <label  for="" >Marca</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.Marca' type="text">
             
-            <label for="">Modelo</label>
-            <input type="text">
+            <label for="" id="model">Modelo</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.Modelo' type="text">
             
-            <label for="">Placa-mãe</label>
-            <input type="text">
+            <label for="" id="placaM">Placa-mãe</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.placaM' type="text">
             
-            <label for="">memória RAM</label>
-            <input type="text"> 
+            <label for="" id="memoR">Memória RAM</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.memoR' type="text"> 
             
-            <label for="">HD e sua marca</label>
-            <input type="text">
+            <label for="" id="hdMarca">HD e marca</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.hdMarca' type="text">
 
-            <label for="">Velocidade do processador</label>
-            <input type="text">
-            <img src="" alt="">
+            <label for="" id="speed">Velocidade do processador</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.speed' type="text">
+            
+            <input type="file" id="photo" accept="image/*">
 
         </div>
 
-        <button>CADASTRAR</button>
+        <button (click)='salvarDados()'>CADASTRAR</button>
+        <button>CANCELAR</button>
     </form>
 </div>
