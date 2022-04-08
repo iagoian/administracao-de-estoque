@@ -1,0 +1,35 @@
+<div class="container-table">
+    <H2>Lista de Computadores</H2>
+
+    <button (click)="filtrar()">Filtrar</button>
+    <input type="text" placeholder="Filtrar" [(ngModel)]="txtFiltro">
+
+    <table class="table table-responsive">
+        <thead>
+            <tr>
+                <th>image</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Placa-mãe</th>
+                <th>Memória RAM</th>
+                <th>HD e Marca</th>
+                <th>Velocidade do processador</th>
+                <th>Deletar</th>
+                <th>Atualizar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let computador of this.computadorArr">
+                <td><img src="PC.jpg" width="40" height="40"></td>
+                <td>{{ computador.marca }}</td>
+                <td>{{ computador.modelo }}</td>
+                <td>{{ computador.placaM }}</td>
+                <td>{{ computador.memoR }}</td>
+                <td>{{ computador.hdMarca }}</td>
+                <td>{{ computador.speed }}</td>
+                <td><a (click)="deletar(computador.id)" class="btn btn-danger">DELETAR</a></td>
+                <td><a (click)="atualizar(computador)" class="btn btn-success">ATUALIZAR</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

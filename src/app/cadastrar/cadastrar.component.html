@@ -1,0 +1,30 @@
+<div class="card">
+    <h1>Cadastrar computador</h1>
+    <form>
+        <div class="form-group">
+            <label  for="" id="marca" >Marca</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.marca' type="text">
+            
+            <label for="" id="model">Modelo</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.modelo' type="text">
+            
+            <label for="" id="placaM">Placa-mãe</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.placaM' type="text">
+            
+            <label for="" id="memoR">Memória RAM</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.memoR' type="text"> 
+            
+            <label for="" id="hdMarca">HD e marca</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.hdMarca' type="text">
+
+            <label for="" id="speed">Velocidade do processador</label>
+            <input [ngModelOptions]="{standalone: true}" [(ngModel)] = 'computador.speed' type="text">
+            
+            <input type="file" id="photo" accept="image/*">
+
+        </div>
+
+        <button (click)='salvarDados()'>CADASTRAR</button>
+        
+    </form>
+</div>
