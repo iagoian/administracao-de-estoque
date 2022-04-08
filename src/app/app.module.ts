@@ -8,14 +8,12 @@ import { AppComponent } from './app.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { ListarComponent } from './listar/listar.component';
 import { AtualizarComponent } from './atualizar/atualizar.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
 @NgModule({
   declarations: [
     AppComponent,
     CadastrarComponent,
     ListarComponent,
     AtualizarComponent,
-    NavMenuComponent,
   ],
   imports: [
     BrowserModule,
